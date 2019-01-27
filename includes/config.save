@@ -1,0 +1,78 @@
+<?php
+/*
+config.php
+
+stores configuration information for our web application
+
+*/
+
+//removes header already sent errors
+ob_start();
+
+define('SECURE',true); #force secure, https, for all site pages
+
+header("Cache-Control: no-cache");header("Expires: -1");#Helps stop browser & proxy caching
+
+define('DEBUG',true); #we want to see all errors 
+
+//define the parent folder of the current page as a constant - save for later use
+define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
+
+//define the current page name as a constant
+define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
+
+switch(THIS_PAGE){
+    case "index.php":
+        $title="Thom Harringtion Web120";
+        break;
+ /*
+    case "big.php":
+        $title="Thom's Big Web120";
+        break;
+    case "final.php":
+        $title="Thom's Final Web120";
+        break;
+*/
+    case "aia.php":
+        $title="Thom's AIA Web120";
+        break;
+    case "flowchart.php":
+        $title="Thom's Flowchart Web120";
+        break;
+    case "contactme.php":
+        $title="Contact Thom Web120";
+        break;
+    default:
+        $title="Thom Harringtion Web120";
+        break;   
+}
+
+
+//prevents date errors
+    date_default_timezone_set('America/Los_Angeles');
+
+//force secure website
+    if (SECURE && $_SERVER['SERVER_PORT'] != 443) {#force HTTPS
+        header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+    }else{//adjust protocol
+        $protocol = (SECURE==true ? 'https://' : 'http://'); // returns true
+    }
+
+//set sub_folder when site is not in root folder - be sure to add trailing slash!
+    $sub_folder = 'web120/';
+
+//set virtual path to web root in site subfolder
+    $virtual_path = $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder;
+
+//will add sub-folder if not loaded to root:
+    $physical_path = $_SERVER["DOCUMENT_ROOT"] . '/' . $sub_folder;
+
+//define subfolder paths
+    define('INCLUDE_PATH', $physical_path . 'includes/');
+    define('CSS_PATH', $virtual_path . 'css/');
+    define('IMAGE_PATH', $virtual_path . 'images/');
+    define('BIG_PATH', $virtual_path . 'big/');
+    define('FP_PATH', $virtual_path . 'fp/');
+    define('JS_PATH', $virtual_path . 'js/');
+
+?>

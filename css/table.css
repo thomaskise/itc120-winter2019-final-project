@@ -1,0 +1,50 @@
+/* this is the table styles */
+
+table {
+  width: 90%;
+  margin: auto;
+  font-family: sans-serif;
+  border-collapse: collapse;
+}
+
+table.client {
+    /*border: 1px solid red;*/
+    margin-bottom: 2em;
+}
+
+table.client th{
+    text-align: right;
+    font-size: 1.25em;
+    width: 25%;
+    background-color: #967d3c;
+}
+
+table.audience {
+    /* Hold the columns equal width */
+    table-layout: fixed
+}
+
+table.audience th {
+    background-color: #967d3c;
+    text-align: left;
+    font-size: 1.25em;
+    width: 33%;
+}
+
+table.audience tr {
+    text-align: left;
+    width: 33%;
+}
+
+tr:nth-of-type(odd) {
+  background-color:#928484;
+}
+
+td, th {
+    font-size: 1.1em;
+    padding: .5em 1em; /* Top and Bottom; Left and Right1 os 100% of the font-size */
+}
+
+.column1{   /* or do td.column1 to apply to td oly */
+    width:25%; /* place in first th and     will cascade through */
+}
