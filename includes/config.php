@@ -73,10 +73,6 @@ switch(THIS_PAGE){
  */
 
 
-//Here are the keys for the server: seattlecentral.edu
-//$siteKey = "6Lf8FMkSAAAAAIR0DTQO4f0zjP-hlyBVcVTjRNB-";
-//$secretKey = "6Lf8FMkSAAAAAKsfveeLDuVJBWTNOm8PvRqL9lNm";
-
 //prevents date errors
     date_default_timezone_set('America/Los_Angeles');
 

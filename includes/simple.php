@@ -27,6 +27,8 @@ $dateFeedback = true; //if true will show date/time with reCAPTCHA error - style
 include 'contact-lib/contact_include.php'; #complex unsightly code moved here
 $response = null;
 $reCaptcha = new ReCaptcha($secretKey);
+
+
 if (isset($_POST["g-recaptcha-response"]))
 {// if submitted check response
     $response = $reCaptcha->verifyResponse(
@@ -34,11 +36,13 @@ if (isset($_POST["g-recaptcha-response"]))
         $_POST["g-recaptcha-response"]
     );
 }
+
 if ($response != null && $response->success)
     {#reCAPTCHA agrees data is valid (PROCESS FORM & SEND EMAIL)
         handle_POST($skipFields,$sendEmail,$toName,$fromAddress,$toAddress,$website,$fromDomain);             #Here we can enter the data sent into a database in a later version of this file
     ?>
-    <!-- START HTML FEEDBACK -->
+
+<!-- START HTML FEEDBACK -->
     <div class="contact-feedback">
         <h2>Your Comments Have Been Received!</h2>
         <p>Thanks for the input!</p>
@@ -47,6 +51,7 @@ if ($response != null && $response->success)
     <!-- END HTML FEEDBACK -->        
     <?php
 }else{#show form, either for first time, or if data not valid per reCAPTCHA 
+    
     if($response != null && !$response->success)
     {
         $feedback = dateFeedback($dateFeedback);
