@@ -1,6 +1,6 @@
 <?php
 /*
-config.php
+config.php for big
 
 stores configuration information for our web application
  * config.php provides a place to store configuration info, 
@@ -11,7 +11,7 @@ stores configuration information for our web application
 ob_start();
 
 include 'credentials.php';
-
+    
 define('SECURE',true); #force secure, https, for all site pages
 
 header("Cache-Control: no-cache");header("Expires: -1");#Helps stop browser & proxy caching
@@ -24,53 +24,39 @@ define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
 //define the current page name as a constant
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
-
+$classSelected="";
 switch(THIS_PAGE){
     case "index.php":
-        $title='Thom Harrington Web120';
+        $title="Thom's Big Home Page";
+        $pageHeading="Thom Harrington | Web Examples &amp; Research";
+        $sectionHeading="Get in touch! We'd love to learn more about you!";
+        $classSelected='"class="selected"';
+        $formAutoFocus="autofocus";
+        $logo="fa fa-fw fa-home";
+        break;
+    case "../index.php":
+        $title="Thom Harrington Web120";
         $pageHeading="Greetings!";
+        $sectionHeading="Greetings!";
         $formAutoFocus="";
-        $logo="logo fa fa-home";
+        $logo="fa fa-fw fa-home";
         break;
-    case "aia.php":
-        $title='Audience Issues &amp; Approch';
-        $pageHeading="AIA Page";
-        $formAutoFocus="";
-        $logo="logo fa fa-database";
-        break;
-    case "flowchart.php":
-        $title="Thom's Flowchart Web120";
-        $pageHeading="Flowchart Page";
-        $formAutoFocus="";
-        $logo="logo fa fa-home";
-        break;
-    case "contactme.php":
-        $title="Contact Thom Web120";
+    case "clientform.php":
+        $title="How to reach us";
         $pageHeading="Get in touch!";
         $formAutoFocus="autofocus";
-        $logo="logo fa fa-envelope";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
         break;
     default:
-        $title="Thom Harringtion Web120";
-        $pageHeading="How'd you get here??!!";
+        $title="Page Not Live";
+        $pageHeading="New Page Coming Soon!";
+        $sectionHeading="Cool stuff coming soon!";
+        $classSelected='"class="selected"';
         $formAutoFocus="";
-        $logo="logo fa fa-home";
+        $logo="fa fa-hammer";
         break;
 }
-
-/**
-  reCAPTCHA site keys
- *
- * @package nmCAPTCHA2
- * @author Bill & Sara Newman <williamnewman@gmail.com>
- * @version 1.01 2015/11/17
- * @link http://www.newmanix.com/
- * @license http://www.apache.org/licenses/LICENSE-2.0
- * @see contact_include.php 
- * @see recaptchalib.php
- * @see util.js 
- * @todo none
- */
 
 
 //prevents date errors
@@ -101,35 +87,6 @@ switch(THIS_PAGE){
     define('JS_PATH', $virtual_path . 'js/');
     define('V_PATH', $virtual_path);
 
-//set nav array for makelinks function
-    $nav1['index.php'] = "Welcome";
-    $nav1['big/index.php'] = "Big";
-    $nav1['aia.php'] = "AIA";
-    $nav1['flowchart.php'] = "Flowchart";
-    $nav1['fp/index.php'] = "Final Project";
-    $nav1['contactme.php'] = "Contact Thom";
 
-/*
-makeLinks function will create our dynamic nav when called.
-Call like this:
-echo makeLinks($nav1); #in which $nav1 is an associative array of links
-*/
-
-function makeLinks($linkArray)
-{
-    $myReturn = '';
-    
-    foreach($linkArray as $url => $text)
-    {
-        if($url == THIS_PAGE)
-        {//selected page - add class reference
-	    	$myReturn .= '<li><a class="selected" href="' . $url . '">' . $text . '</a></li>' . PHP_EOL;
-    	}else{
-	    	$myReturn .= '<li><a href="' . $url . '">' . $text . '</a></li>'  . PHP_EOL;
-    	}    
-    }
-      
-    return $myReturn;    
-}
 
 ?>
