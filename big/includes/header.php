@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/big.css" />
     <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
     <script src="js/script.js"></script>
 </head>

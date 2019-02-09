@@ -41,9 +41,66 @@ switch(THIS_PAGE){
         $formAutoFocus="";
         $logo="fa fa-fw fa-home";
         break;
-    case "clientform.php":
-        $title="How to reach us";
-        $pageHeading="Get in touch!";
+    case "flexbox.php":
+        $title="Flexbox-future";
+        $pageHeading="Flexbox! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "galleries.php":
+        $title="Galleries-future";
+        $pageHeading="Galleries! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "calendar.php":
+        $title="Calendar-future";
+        $pageHeading="Calendar! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "map.php":
+        $title="Map-future";
+        $pageHeading="Map! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "youtube.php":
+        $title="YouTube-future";
+        $pageHeading="YouTube! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "shoppingcarts.php":
+        $title="Shopping Carts-future";
+        $pageHeading="Shopping Carts! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "siteapp.php":
+        $title="Site vs App-future";
+        $pageHeading="Site vs App! (future)";
+        $sectionHeading="Cool stuff soon!!";
+        $formAutoFocus="autofocus";
+        $classSelected='"class="selected"';
+        $logo="fa fa-fw fa-home";
+        break;
+     case "webcam.php":
+        $title="Webcam-future";
+        $pageHeading="Webcam! (future)";
+        $sectionHeading="Cool stuff soon!!";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
         $logo="fa fa-fw fa-home";
