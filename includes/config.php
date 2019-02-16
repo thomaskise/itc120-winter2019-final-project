@@ -105,7 +105,8 @@ switch(THIS_PAGE){
     $nav1['index.php'] = "Welcome";
     $nav1['big/index.php'] = "Big";
     $nav1['aia.php'] = "AIA";
-    $nav1['flowchart.php'] = "Flowchart";
+    $nav1['https://docs.google.com/document/d/1NCAelbAR2mZKw3gZgBtb4LYfvQ-veT3hBeh2m9Luj88/edit?usp=sharing class="external" target="_blank" rel="noreferrer noopener"'] = "Flowchart [link]";
+//    $nav1['flowchart.php'] = "Flowchart";
     $nav1['fp/index.php'] = "Final Project";
     $nav1['contactme.php'] = "Contact Thom";
 
@@ -123,12 +124,11 @@ function makeLinks($linkArray)
     {
         if($url == THIS_PAGE)
         {//selected page - add class reference
-	    	$myReturn .= '<li><a class="selected" href="' . $url . '">' . $text . '</a></li>' . PHP_EOL;
+	    	$myReturn .= '<li><a class="selected" href="' . $url . '">' . $text . '</a><i class="fas fa-external-link-alt"></i></li>' . PHP_EOL;
     	}else{
-	    	$myReturn .= '<li><a href="' . $url . '">' . $text . '</a></li>'  . PHP_EOL;
+	    	$myReturn .= '<li><a href="' . $url . '">' . $text . '</a></i></li>'  . PHP_EOL;
     	}    
     }
-      
     return $myReturn;    
 }
 
