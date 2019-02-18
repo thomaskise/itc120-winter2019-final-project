@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="noindex,nofollow" />
     <meta charset="utf-8">
-<!--
     <link rel="stylesheet" href="css/default_cic.css" />
     <link rel="stylesheet" href= "css/nav_cic.css" />
     <link rel="stylesheet" href="css/form.css" />
--->
-    <link rel="stylesheet" href="css/underconstruction.css" />
-<!--
-    <link rel="stylesheet" href="css/nav_exp.css" />
-    <link rel="stylesheet" href="css/approach2.css" />
--->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
     <script src="js/script.js"></script>
@@ -26,21 +19,10 @@
 <!-- START WRAPPER -->
 <div class="wrapper">
     <header>
-<!--
-        <div class="logo">
-            <p>Clay's</p>
-            <p>Cool</p>
-        </div>
--->
-        <div class="heading">
-            <h1>Clay's Cool Template</h1>
-        </div>
-    </header>
+        <h1><?=$pageHeading?></h1>
     
-        
-    <main>
 <!-- Sidebar nav -->
-        <div class="bottom_sidebar">
+        <div class="s-layout__sidebar">
           <a class="s-sidebar__trigger" href="#0">
              <i class="fa fa-bars"></i>
           </a>
@@ -51,13 +33,13 @@
              </ul>
           </nav>
         </div>
-
+    </header>
 
     <!-- Content -->
- 
+    <main>
 
        <section>
-          <h2>Final Project - Soon to come</h2>
+          <h2 class="pageID">Final Project - Soon to come</h2>
           <p>This will be cool, but it comes later in the quarter</p>
        </section>
         <aside>
@@ -70,8 +52,8 @@
  
 <!-- START footer.php -->
     <!-- start footer -->
-    <hr class="footer">
-    <footer class="footer_content">
+    <footer class="footer">
+        <hr class="footer">
         <p><small>
             <strong>
                 For information on Clay's Cool contact: 
