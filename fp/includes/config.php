@@ -1,6 +1,6 @@
 <?php
 /*
-config.php for big
+config.php for fp
 
 stores configuration information for our web application
  * config.php provides a place to store configuration info, 
@@ -27,6 +27,7 @@ define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 $classSelected="";
 switch(THIS_PAGE){
     case "index.php":
+
         $title="Template";
         $pageHeading="Clay's Cool!!";
         $sectionHeading="Get in touch! We'd love to learn more about you!";
@@ -34,7 +35,6 @@ switch(THIS_PAGE){
         $formAutoFocus="autofocus";
         $logo="fa fa-fw fa-home";
         break;
-    
     default:
         $title="Page Not Live";
         $pageHeading="New Page Coming Soon!";
@@ -57,7 +57,9 @@ switch(THIS_PAGE){
     }
 
 //set sub_folder when site is not in root folder - be sure to add trailing slash!
-    $sub_folder = 'web120/fp/';
+
+    $sub_folder = 'web120/';
+
 
 //set virtual path to web root in site subfolder
     $virtual_path = $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder;
@@ -69,19 +71,6 @@ switch(THIS_PAGE){
     define('INCLUDE_PATH', $physical_path . 'includes/');
     define('CSS_PATH', $virtual_path . 'css/');
     define('IMAGE_PATH', $virtual_path . 'images/');
-    define('JS_PATH', $virtual_path . 'js/');
-    define('V_PATH', $virtual_path);
-
-//echo '<div style= "background-color=white"
-//         Sub folder = ' . $sub_folder . '<BR />' .
-//        'Virtual path = ' . $virtual_path . '<BR />' .
-//        'Physical path = ' . $physical_path . '<BR />' .
-//        'Include path = ' . INCLUDE_PATH . '<BR />' .
-//        'CSS path = ' . CSS_PATH . '<BR />' .
-//        'Image path = ' . IMAGE_PATH . '<BR />' .
-//        'JS Path= ' . JS_PATH . '<BR />
-//    </div>';
-//die();
 /*
  * creates navigation links wrapped in <ul> & <li> tags
  *
@@ -112,4 +101,5 @@ switch(THIS_PAGE){
 //    }
 //    return $myReturn;    
 //}
+
 ?>

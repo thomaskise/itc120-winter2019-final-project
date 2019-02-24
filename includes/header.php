@@ -3,7 +3,9 @@
     <head>
         <title><?=$title?></title>
         <meta name="viewport" content="width=device-width" />
-        <meta name="robots" content="noindex,nofollow" />
+        <meta name="robots" content="<?=$robots?>" />
+        <meta name="description" content="<?=$meta_description?>"/>
+        <meta name="keywords" content="<?=$meta_content?>"/>
         <meta charset="utf-8">
         <script src='https://www.google.com/recaptcha/api.js?render=6LeUT4kUAAAAAF_Mw3YbkVb6GZKRYugT2SUnJj58'></script>
         <script src="https://use.fontawesome.com/f91d5068d3.js"></script>

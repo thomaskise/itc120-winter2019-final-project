@@ -24,6 +24,13 @@ define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
 //define the current page name as a constant
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
+$meta_description = "";
+$meta_content = "";
+
+$robots ="noindex,nofollow";
+// noindex,follow
+// index,follow
+// index,nofollow
 
 switch(THIS_PAGE){
     case "index.php":
@@ -31,6 +38,7 @@ switch(THIS_PAGE){
         $pageHeading="Greetings!";
         $formAutoFocus="";
         $logo="logo fa fa-home";
+        $robots ="noindex,nofollow"
         break;
     case "aia.php":
         $title='Audience Issues &amp; Approch';
@@ -49,12 +57,14 @@ switch(THIS_PAGE){
         $pageHeading="Get in touch!";
         $formAutoFocus="autofocus";
         $logo="logo fa fa-envelope";
+        $meta_description = "Please contact Thom, I'm a " . $meta_description;
         break;
     default:
         $title="Thom Harringtion Web120";
         $pageHeading="How'd you get here??!!";
         $formAutoFocus="";
         $logo="logo fa fa-home";
+        $robots ="noindex,nofollow"
         break;
 }
 
