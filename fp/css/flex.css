@@ -83,6 +83,7 @@ header{
 .s-layout__content section {
     text-align: left;
     width: 50%;
+    flex-direction: column;
 }
 
 .s-layout__content aside {

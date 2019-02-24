@@ -5,7 +5,7 @@
     <p class="footer_content"><small>
         <strong>
             For information on Clay's Cool contact: 
-            <a href="/contact.php">Clay's Cool email</a>
+            <a href="contact.php">Clay's Cool email</a>
     </strong><BR />
         &copy; 2016 - <?=date("Y")?> Design &amp; Development by 
             <a href="https://www.purplemoondesign.com">Purple Moon Design LLC</a>. All rights reserved.<BR />

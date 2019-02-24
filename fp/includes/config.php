@@ -1,6 +1,6 @@
 <?php
 /*
-config.php for big
+config.php for fp
 
 stores configuration information for our web application
  * config.php provides a place to store configuration info, 
@@ -27,82 +27,12 @@ define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 $classSelected="";
 switch(THIS_PAGE){
     case "index.php":
-        $title="Thom's Big Home Page";
-        $pageHeading="Thom Harrington | Web Examples &amp; Research";
+
+        $title="Template";
+        $pageHeading="Clay's Cool!!";
         $sectionHeading="Get in touch! We'd love to learn more about you!";
         $classSelected='"class="selected"';
         $formAutoFocus="autofocus";
-        $logo="fa fa-fw fa-home";
-        break;
-    case "../index.php":
-        $title="Thom Harrington Web120";
-        $pageHeading="Greetings!";
-        $sectionHeading="Greetings!";
-        $formAutoFocus="";
-        $logo="fa fa-fw fa-home";
-        break;
-    case "flexbox.php":
-        $title="Flexbox-future";
-        $pageHeading="Flexbox! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
-        break;
-     case "galleries.php":
-        $title="Galleries-future";
-        $pageHeading="Galleries! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
-        break;
-     case "calendar.php":
-        $title="Calendar-future";
-        $pageHeading="Calendar! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
-        break;
-     case "map.php":
-        $title="Map-future";
-        $pageHeading="Map! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
-        break;
-     case "youtube.php":
-        $title="YouTube-future";
-        $pageHeading="YouTube! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
-        break;
-     case "shoppingcarts.php":
-        $title="Shopping Carts-future";
-        $pageHeading="Shopping Carts! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
-        break;
-     case "siteapp.php":
-        $title="Responsive vs Mobile";
-        $pageHeading=" Biggest Bang for the Future: Responsive vs Mobile";
-        $sectionHeading="Be response - do what's right! ";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-mobile";
-        break;
-     case "webcam.php":
-        $title="Webcam-future";
-        $pageHeading="Webcam! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
         $logo="fa fa-fw fa-home";
         break;
     default:
@@ -127,7 +57,9 @@ switch(THIS_PAGE){
     }
 
 //set sub_folder when site is not in root folder - be sure to add trailing slash!
+
     $sub_folder = 'web120/';
+
 
 //set virtual path to web root in site subfolder
     $virtual_path = $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder;
@@ -139,11 +71,35 @@ switch(THIS_PAGE){
     define('INCLUDE_PATH', $physical_path . 'includes/');
     define('CSS_PATH', $virtual_path . 'css/');
     define('IMAGE_PATH', $virtual_path . 'images/');
-    define('BIG_PATH', $virtual_path . 'big/');
-    define('FP_PATH', $virtual_path . 'fp/');
-    define('JS_PATH', $virtual_path . 'js/');
-    define('V_PATH', $virtual_path);
+/*
+ * creates navigation links wrapped in <ul> & <li> tags
+ *
+ *
+ * returns [text] fully formatted nav element tags
+ */
+
+//set nav array for makelinks function
+    $nav1['index.php'] = "Welcome";
+    $nav1['classes.php'] = "Classes Offered";
+    $nav1['about.php'] = "About Clay's Cool";
+    $nav1['contact.php'] = "Contact Clay's Cool";
+    $nav1['https://www.purplemoondesign.com/pages/aboutTheArtist.htm'] = "Instructor Bio";
 
 
+//function makeLinks($linkArray)
+//{
+//    $myReturn = '';
+//    
+//    foreach($linkArray as $url => $text)
+//    {
+//        if($url == THIS_PAGE)
+//        {//selected page - add class reference
+//	    	$myReturn .= '<li> <a style="background-color="black" class="s-sidebar__nav-link" href="' . $url . '">' . $text . '</a></li>' . PHP_EOL;
+//    	}else{
+//	    	$myReturn .= '<li> <a class="s-sidebar__nav-link" href=' . $url . '">' . $text . '</a></li>'  . PHP_EOL;
+//    	}    
+//    }
+//    return $myReturn;    
+//}
 
 ?>
