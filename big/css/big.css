@@ -79,8 +79,8 @@ footer {
 			
 	
     img.desktop {
-        float:left;
-       	width:50%;
+        float:right;
+       	width:35%;
         padding-left: 15px;
         padding-right: 15px;
    	 }

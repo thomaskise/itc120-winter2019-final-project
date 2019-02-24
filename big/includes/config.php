@@ -90,12 +90,12 @@ switch(THIS_PAGE){
         $logo="fa fa-fw fa-home";
         break;
      case "siteapp.php":
-        $title="Site vs App-future";
-        $pageHeading="Site vs App! (future)";
-        $sectionHeading="Cool stuff soon!!";
+        $title="Responsive vs Mobile";
+        $pageHeading=" Biggest Bang for the Future: Responsive vs Mobile";
+        $sectionHeading="Be response - do what's right! ";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-mobile";
         break;
      case "webcam.php":
         $title="Webcam-future";
