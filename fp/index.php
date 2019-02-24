@@ -1,92 +1,18 @@
-<?php include 'includes/config.php';?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title><?=$title?></title>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta charset="utf-8">
-<!--
-    <link rel="stylesheet" href="css/default_cic.css" />
-    <link rel="stylesheet" href= "css/nav_cic.css" />
-    <link rel="stylesheet" href="css/form.css" />
--->
-    <link rel="stylesheet" href="css/underconstruction.css" />
-<!--
-    <link rel="stylesheet" href="css/nav_exp.css" />
-    <link rel="stylesheet" href="css/approach2.css" />
--->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />-->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
-    <script src="js/script.js"></script>
-</head>
+<?php include 'includes/header.php';?>
 
-<body>
-<!-- START WRAPPER -->
-<div class="wrapper">
-    <header>
-<!--
-        <div class="logo">
-            <p>Clay's</p>
-            <p>Cool</p>
-        </div>
--->
-        <div class="heading">
-            <h1>Clay's Cool Template</h1>
-        </div>
-    </header>
-    
-        
-    <main>
-<!-- Sidebar nav -->
-        <div class="bottom_sidebar">
-          <a class="s-sidebar__trigger" href="#0">
-             <i class="fa fa-bars"></i>
-          </a>
-
-          <nav class="s-sidebar__nav">
-             <ul>
-                <?=makeLinks($nav1)?>
-             </ul>
-          </nav>
-        </div>
-
-
-    <!-- Content -->
- 
-
-       <section>
-          <h2>Final Project - Soon to come</h2>
-          <p>This will be cool, but it comes later in the quarter</p>
-       </section>
-        <aside>
-            <h2>image goes here</h2>
-        </aside>
-    </main>
-
-
-    
- 
-<!-- START footer.php -->
-    <!-- start footer -->
-    <hr class="footer">
-    <footer class="footer_content">
-        <p><small>
-            <strong>
-                For information on Clay's Cool contact: 
-                <a href="/contact.php">Clay's Cool email </a>
-                206.325.3626 (voice) 
-            </strong><BR />
-            &copy; 2016 - <?=date("Y")?> Design &amp; Development by 
-                <a href="https://www.purplemoondesign.com">Purple Moon Design LLC</a>. All rights reserved.<BR />
-            <a href="https://validator.w3.org/check/referer" target="_blank">Valid HTML5</a>
-            ~ 
-            <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
-        </small></p>
-    </footer>
-</div>
-<!-- END WRAPPER -->
-</body>
-</html>
-
+<!-- Content -->
+<main class="s-layout__content">
+    <section>
+        <h2>Morbi in sem quis dui!</h2>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.<br />
+        Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    </section>
+<!--aside has no content for home page -->
+  <aside>
+      <center>
+        <img src="images/tempimage.jpg" alt="template image" id="pagepic" />
+      </center>
+      <p style="text-align:center;">pic label</p>
+  </aside>
+</main>
+<?php include 'includes/footer.php';?>
