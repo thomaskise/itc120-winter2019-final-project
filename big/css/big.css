@@ -47,12 +47,26 @@ div.embed-container iframe {
     height: 100%;
 }
 
+/* hide agenda view calendar*/
+.embed-container.agenda-view {
+    display:none;
+}
+
+/* callender rules for displays <= 1439px*/
+@media all and (max-width:1000px) {
+        .embed-container.month-view {
+                display:none;
+        }
+        .embed-container.agenda-view {
+                display:block;
+        }
+}
+
 footer {
 	clear:both;
 }
 
 /* START RESPONSIVE STYLES */
-
 /* DESKTOP */
 @media all and (min-width:1400px) {
 	
@@ -123,7 +137,6 @@ footer {
           }
   }
 
-
 /* PHONE */
 @media all and (max-width:736px) {
     
@@ -134,5 +147,4 @@ footer {
     img.tablet, img.desktop {
         		display:none;
     }  
-
 }
