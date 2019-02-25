@@ -42,49 +42,45 @@ switch(THIS_PAGE){
         $logo="fa fa-fw fa-home";
         break;
     case "flexbox.php":
-        $title="Flexbox-future";
-        $pageHeading="Flexbox! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
+        $title="Flexbox";
+        $pageHeading="Flexbox!";
+        $sectionHeading="Flexbox Offers Responsiveness!";
         $classSelected='"class="selected"';
         $logo="fa fa-fw fa-home";
         break;
      case "galleries.php":
-        $title="Galleries-future";
-        $pageHeading="Galleries! (future)";
-        $sectionHeading="Cool stuff soon!!";
+        $title="Image Galleries";
+        $pageHeading="Snazzy websites : Image Galleries";
+        $sectionHeading="Image Galleries";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
         $logo="fa fa-fw fa-home";
         break;
      case "calendar.php":
-        $title="Calendar-future";
-        $pageHeading="Calendar! (future)";
-        $sectionHeading="Cool stuff soon!!";
+        $title="Calendar";
+        $pageHeading="Calendar!";
+        $sectionHeading="What's Up?";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
         $logo="fa fa-fw fa-home";
         break;
      case "map.php":
-        $title="Map-future";
-        $pageHeading="Map! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
+        $title="Google Map - SCC";
+        $pageHeading="Google Maps";
+        $sectionHeading="Map to Seattle Central College";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-map-marker";
         break;
      case "youtube.php":
-        $title="YouTube-future";
-        $pageHeading="YouTube! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
-        $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $title="YouTube Video";
+        $pageHeading="Jefferson Airplane - White Rabbit!";
+        $sectionHeading="Classic!";
+        $logo="fa fa-plane";
         break;
      case "shoppingcarts.php":
-        $title="Shopping Carts-future";
+        $title="Shopping Carts";
         $pageHeading="Shopping Carts! (future)";
-        $sectionHeading="Cool stuff soon!!";
+        $sectionHeading="Just to it!";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
         $logo="fa fa-fw fa-home";
@@ -92,13 +88,13 @@ switch(THIS_PAGE){
      case "siteapp.php":
         $title="Responsive vs Mobile";
         $pageHeading=" Biggest Bang for the Future: Responsive vs Mobile";
-        $sectionHeading="Be response - do what's right! ";
+        $sectionHeading="Be responsive - do what's right! ";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
         $logo="fa fa-mobile";
         break;
      case "webcam.php":
-        $title="Webcam-future";
+        $title="WRefreshing iFramed Webcam";
         $pageHeading="Webcam! (future)";
         $sectionHeading="Cool stuff soon!!";
         $formAutoFocus="autofocus";
