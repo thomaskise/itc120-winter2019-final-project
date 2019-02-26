@@ -14,31 +14,26 @@
     <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/flex.css" />
 </head>
-    
 <body>
-
 <!-- Content -->
 <header>
     <div class="logo">
-        <img src="images/pmdbutton.gif" alt="template image" id="pagepic" />
+        <img src="images/pmdbutton.gif" alt="template image" id="logoimage" />
     </div>
     <div class="heading">
         <h1><?=$pageHeading?></h1>
         <p>Pellentesque habitant morbi tristique senectus.</p>
     </div>
+    <div class="s-layout">
+        <!-- Sidebar -->
+        <div class="s-layout__sidebar">
+          <a class="s-sidebar__trigger" href="#0">
+             <i style="font-size: -webkit-xxx-large" class="fa fa-bars"></i>
+          </a>
+          <nav class="s-sidebar__nav">
+            <ul><?=makeLinks($nav1)?></ul>
+          </nav>      
+        </div>
+    </div> <!-- closes <div class="s-layout"> -->
 </header>
-
-<div class="s-layout">
-<!-- Sidebar -->
-<div class="s-layout__sidebar">
-  <a class="s-sidebar__trigger" href="#0">
-     <i style="font-size: -webkit-xxx-large" class="fa fa-bars"></i>
-  </a>
-
-  <nav class="s-sidebar__nav">
-        <ul>
-            <?=makeLinks($nav1)?>
-        </ul>
-  </nav>      
-</div>
 <!-- header ends here -->

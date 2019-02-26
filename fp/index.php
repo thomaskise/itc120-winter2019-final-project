@@ -14,10 +14,8 @@
     </section>
 <!--aside has no content for home page -->
   <aside>
-      <center>
-        <img src="images/tempimage.jpg" alt="template image" id="pagepic" />
-      </center>
-      <p style="text-align:center;">pic label</p>
+    <img src="images/tempimage.jpg" alt="template image" id="pagepic" />
+    <p style="text-align:center;">pic label</p>
   </aside>
 </main>
 <?php include 'includes/footer.php';?>
