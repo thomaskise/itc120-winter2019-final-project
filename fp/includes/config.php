@@ -83,7 +83,7 @@ switch(THIS_PAGE){
     $nav1["classes.php"] = '<i class="fa fa-asterisk"></i><em>Classes Offered';
     $nav1["about.php"] = '<i class="fa fa-question"></i><em>About Clay\'s Cool';
     $nav1["contact.php"] = '<i class="fa fa-envelope"></i><em>Contact Clay\'s Cool';
-    $nav1['https://www.purplemoondesign.com/pages/aboutTheArtist.htm" target="_blank"'] = '<i class="fa fa-user"></i><em>Instructor Bio';
+    $nav1['https://www.purplemoondesign.com/pages/aboutTheArtist.htm" target="_blank'] = '<i class="fa fa-user"></i><em>Instructor Bio';
 
 function makeLinks($linkArray)
 {

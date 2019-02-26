@@ -1,5 +1,4 @@
 <!-- START footer -->
-</div> <!-- closes <div class="s-layout__sidebar"> -->
 <footer>
 <hr class="footer">
     <p class="footer_content"><small>
