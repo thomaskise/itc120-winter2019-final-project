@@ -24,13 +24,12 @@ define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
 //define the current page name as a constant
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
-$meta_description = "";
-$meta_content = "";
-
 $robots ="noindex,nofollow";
 // noindex,follow
 // index,follow
 // index,nofollow
+$meta_content = "backend developer, back-end developer, contract developer anywhere, php, xml, github, slack, communication, requirements analysis, experienced, diverse background, mobile first, responsive";
+$meta_description = "Web developer seeking opportunities. Not geo location restricted. Strong back-end dev and frontend capable.";
 
 switch(THIS_PAGE){
     case "index.php":
@@ -38,7 +37,6 @@ switch(THIS_PAGE){
         $pageHeading="Greetings!";
         $formAutoFocus="";
         $logo="logo fa fa-home";
-        $robots ="noindex,nofollow"
         break;
     case "aia.php":
         $title='Audience Issues &amp; Approch';
@@ -57,6 +55,7 @@ switch(THIS_PAGE){
         $pageHeading="Get in touch!";
         $formAutoFocus="autofocus";
         $logo="logo fa fa-envelope";
+        $robots ="index,nofollow";
         $meta_description = "Please contact Thom, I'm a " . $meta_description;
         break;
     default:
@@ -64,7 +63,7 @@ switch(THIS_PAGE){
         $pageHeading="How'd you get here??!!";
         $formAutoFocus="";
         $logo="logo fa fa-home";
-        $robots ="noindex,nofollow"
+        $robots ="noindex,nofollow";
         break;
 }
 

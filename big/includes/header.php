@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="noindex,nofollow" />
     <meta charset="utf-8">
+<!--
     <meta http-equiv="refresh" content="2"; url="webcam.php" />
+    <meta http-equiv="expires" content="0" /> 
+-->
     <link rel="stylesheet" href= "css/nav.css" />
     <link rel="stylesheet" href="css/big.css" />
     <link rel="stylesheet" href="css/form.css" />
