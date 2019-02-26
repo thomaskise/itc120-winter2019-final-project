@@ -49,8 +49,8 @@ header{
 }
 
 .logo img {
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
     margin-left: -5px;
     margin-top; -5px;
 }
@@ -107,7 +107,7 @@ header{
 .s-sidebar__trigger > i {
    display: inline-block;
    margin: 0.5em 0 0 0.5em;
-   color: yellow;
+   color: #87CEEB;
 }
 
 .s-sidebar__nav {
