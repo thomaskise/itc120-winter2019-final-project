@@ -23,7 +23,7 @@
         <img src="images/pmdbutton.gif" alt="template image" id="pagepic" />
     </div>
     <div class="heading">
-        <h1>Template</h1>
+        <h1><?=$pageHeading?></h1>
         <p>Pellentesque habitant morbi tristique senectus.</p>
     </div>
 </header>
@@ -36,32 +36,9 @@
   </a>
 
   <nav class="s-sidebar__nav">
-     <ul>
-        <li>
-           <a class="s-sidebar__nav-link" href="index.php">
-              <i class="fa fa-home"></i><em>Home</em>
-           </a>
-        </li>
-        <li>
-           <a class="s-sidebar__nav-link" href="classes.php">
-             <i class="fa fa-asterisk"></i><em>Classes</em>
-           </a>
-        </li>
-        <li>
-           <a class="s-sidebar__nav-link" href="about.php">
-              <i class="fa fa-question"></i><em>About Clay's Cool</em>
-           </a>
-        </li>
-        <li>
-           <a class="s-sidebar__nav-link" href="contact.php">
-              <i class="fa fa-envelope"></i><em>Contact Clay's Cool</em>
-           </a>
-        <li>
-           <a class="s-sidebar__nav-link" href="https://www.purplemoondesign.com/pages/aboutTheArtist.htm" target="_blank">
-              <i class="fa fa-user"></i><em>Instructor Bio</em>
-           </a>
-        </li>
-     </ul>
-  </nav>
+        <ul>
+            <?=makeLinks($nav1)?>
+        </ul>
+  </nav>      
 </div>
 <!-- header ends here -->

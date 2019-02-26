@@ -29,7 +29,7 @@ switch(THIS_PAGE){
     case "index.php":
 
         $title="Template";
-        $pageHeading="Clay's Cool!!";
+        $pageHeading="Template";
         $sectionHeading="Get in touch! We'd love to learn more about you!";
         $classSelected='"class="selected"';
         $formAutoFocus="autofocus";
@@ -79,27 +79,28 @@ switch(THIS_PAGE){
  */
 
 //set nav array for makelinks function
-    $nav1['index.php'] = "Welcome";
-    $nav1['classes.php'] = "Classes Offered";
-    $nav1['about.php'] = "About Clay's Cool";
-    $nav1['contact.php'] = "Contact Clay's Cool";
-    $nav1['https://www.purplemoondesign.com/pages/aboutTheArtist.htm'] = "Instructor Bio";
+    $nav1["index.php"] = '<i class="fa fa-home"></i><em>Home';
+    $nav1["classes.php"] = '<i class="fa fa-asterisk"></i><em>Classes Offered';
+    $nav1["about.php"] = '<i class="fa fa-question"></i><em>About Clay\'s Cool';
+    $nav1["contact.php"] = '<i class="fa fa-envelope"></i><em>Contact Clay\'s Cool';
+    $nav1['https://www.purplemoondesign.com/pages/aboutTheArtist.htm" target="_blank"'] = '<i class="fa fa-user"></i><em>Instructor Bio';
 
+function makeLinks($linkArray)
+{
+    $myReturn = '';
+    
+    foreach($linkArray as $url => $text)
+    {
 
-//function makeLinks($linkArray)
-//{
-//    $myReturn = '';
-//    
-//    foreach($linkArray as $url => $text)
-//    {
-//        if($url == THIS_PAGE)
-//        {//selected page - add class reference
-//	    	$myReturn .= '<li> <a style="background-color="black" class="s-sidebar__nav-link" href="' . $url . '">' . $text . '</a></li>' . PHP_EOL;
-//    	}else{
-//	    	$myReturn .= '<li> <a class="s-sidebar__nav-link" href=' . $url . '">' . $text . '</a></li>'  . PHP_EOL;
-//    	}    
-//    }
-//    return $myReturn;    
-//}
+        if($url == THIS_PAGE)
+        {//selected page - add class reference
+	    	$myReturn .= '<li> <a style="color:red" class="s-sidebar__nav-link" href="' . $url . '">' . $text . '</em></a></li>'  . PHP_EOL;
+    	}else{
+	    	$myReturn .= '<li> <a class="s-sidebar__nav-link" href="' . $url . '">' . $text . '</em></a></li>'  . PHP_EOL;
+    	} 
+        
+    }
+    return $myReturn;    
+}
 
 ?>
