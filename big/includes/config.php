@@ -25,86 +25,75 @@ define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
 $classSelected="";
+$pageHeading=" Thom Harrington | Web Examples &amp; Research";
 switch(THIS_PAGE){
-    case "index.php":
-        $title="Thom's Big Home Page";
-        $pageHeading="Thom Harrington | Web Examples &amp; Research";
-        $sectionHeading="Get in touch! We'd love to learn more about you!";
-        $classSelected='"class="selected"';
-        $formAutoFocus="autofocus";
-        $logo="fa fa-fw fa-home";
-        break;
     case "../index.php":
         $title="Thom Harrington Web120";
         $pageHeading="Greetings!";
-        $sectionHeading="Greetings!";
+        $sectionHeading=" Greetings!";
         $formAutoFocus="";
         $logo="fa fa-fw fa-home";
         break;
+    case "index.php":
+        $title="Thom's Big Home Page";
+        $sectionHeading=" Get in touch! We'd love to learn more about you!";
+        $classSelected='"class="selected"';
+        $formAutoFocus="autofocus";
+        $logo="fa fa-envelope";
+        break;
     case "flexbox.php":
         $title="Flexbox";
-        $pageHeading="Flexbox!";
-        $sectionHeading="Flexbox Offers Responsiveness!";
+        $sectionHeading=" Flexbox Offers Responsiveness!";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-magic";
         break;
      case "galleries.php":
         $title="Image Galleries";
-        $pageHeading="Snazzy websites : Image Galleries";
-        $sectionHeading="Image Galleries";
+        $sectionHeading=" Snazzy websites : Image Galleries";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-picture-o";
         break;
      case "calendar.php":
         $title="Calendar";
-        $pageHeading="Calendar!";
-        $sectionHeading="What's Up?";
+        $sectionHeading=" Thom's Calendar!";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-calendar";
         break;
      case "map.php":
         $title="Google Map - SCC";
-        $pageHeading="Google Maps";
-        $sectionHeading="Map to Seattle Central College";
+        $sectionHeading=" Map to Seattle Central College";
         $classSelected='"class="selected"';
         $logo="fa fa-map-marker";
         break;
      case "youtube.php":
         $title="YouTube Video";
-        $pageHeading="Jefferson Airplane - White Rabbit!";
-        $sectionHeading="Classic!";
-        $logo="fa fa-plane";
+        $sectionHeading=" Jefferson Airplane - White Rabbit!";
+        $logo="fa fa-youtube";
         break;
      case "shoppingcarts.php":
         $title="Shopping Carts";
-        $pageHeading="Shopping Carts! (future)";
-        $sectionHeading="Just to it!";
-        $formAutoFocus="autofocus";
+        $sectionHeading=" Shopping Carts!";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-shopping-cart";
         break;
      case "siteapp.php":
         $title="Responsive vs Mobile";
-        $pageHeading=" Biggest Bang for the Future: Responsive vs Mobile";
-        $sectionHeading="Be responsive - do what's right! ";
+        $sectionHeading=" Biggest Bang for the Future: Responsive vs Mobile";
         $formAutoFocus="autofocus";
         $classSelected='"class="selected"';
         $logo="fa fa-mobile";
         break;
      case "webcam.php":
-        $title="WRefreshing iFramed Webcam";
-        $pageHeading="Webcam! (future)";
-        $sectionHeading="Cool stuff soon!!";
-        $formAutoFocus="autofocus";
+        $title="Refreshing iFramed Webcam";
+        $sectionHeading=" Webcam!";
         $classSelected='"class="selected"';
-        $logo="fa fa-fw fa-home";
+        $logo="fa fa-video-camera";
         break;
     default:
         $title="Page Not Live";
-        $pageHeading="New Page Coming Soon!";
-        $sectionHeading="Cool stuff coming soon!";
+        $sectionHeading=" Cool stuff coming soon!";
         $classSelected='"class="selected"';
         $formAutoFocus="";
         $logo="fa fa-hammer";
