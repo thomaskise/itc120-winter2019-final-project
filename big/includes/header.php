@@ -22,7 +22,7 @@
 <!-- START WRAPPER -->
 <div class="wrapper">
 <header>
-    <h1><a href="index.php"><i class="<?=$logo?>"></i><?=$pageHeading?></a></h1>
+    <h1><a href="index.php"><i class="fa fa-fw fa-home"></i><?=$pageHeading?></a></h1>
     <nav id="cssmenu">
     <ul>
         <li><a href="../index.php"><span><i class="fa fa-fw fa-bank"></i> WEB120 Portal</span></a></li>

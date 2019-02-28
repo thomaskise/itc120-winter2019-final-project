@@ -10,9 +10,23 @@ div.wrapper {
     overflow:auto;
 }
 
+div h4 + p {
+    line-height: 1em;
+    margin-top: -.5em;
+}
+
 h1>a {
     text-decoration: none;
     color:#0c0cd8;
+}
+
+aside ul {
+    margin: 0 0 0 -1em;
+}
+
+aside li {
+    position: relative;
+    margin:0 2em 1em 0;
 }
 
 .logo {
@@ -47,6 +61,17 @@ div.embed-container iframe {
     height: 100%;
 }
 
+.full-screen {
+    min-height: 100vh;
+    background-color: #1abc9c;
+    width: 100%;
+    padding:0;
+}
+.center {
+  text-align: center;
+}
+
+
 /* hide agenda view calendar*/
 .embed-container.agenda-view {
     display:none;
@@ -80,15 +105,16 @@ footer {
     }
     
     section {
-		width:62%;
+		width:50%;
 		float:left;
-        padding-left: 25px;
+        padding: 0 0 0 2em;
 	}
 	
      aside {	
-		width: 33%;
+		width: 40%;
 		float: right;
-        padding-right: 25px;
+        padding-right: 2em;
+        word-wrap: break-word;
 	}
 			
 	
@@ -114,13 +140,15 @@ footer {
 @media all and (min-width:737px) and (max-width:1399px) {
 	
 	section {
-		width:60%;
+		width:50%;
 		float:left;
+        padding: 0px 15px 0px 50px;
 	}
 	
 	aside {	
 		width:39%;
 		float:right;
+        word-wrap: break-word;
 	}
 	
             img.tablet {
@@ -146,5 +174,16 @@ footer {
     
     img.tablet, img.desktop {
         		display:none;
-    }  
+    }
+    
+    section {
+        width:90%;
+        padding: 0px 15px 0px 15px;
+    }
+    
+    aside {	
+		width:90%;
+        word-wrap: break-word;
+        padding: 0px 15px 0px 15px;
+	}
 }

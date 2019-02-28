@@ -2,7 +2,7 @@
 <?php include 'includes/header.php'?>   
 
 <section>
-    <h2 class="pageID"><?=$sectionHeading;?></h2>
+    <h2 class="pageID"><i class="<?=$logo?>"></i><?=$sectionHeading?></h2>
     <!--show/hide month/day calendar based on resolution -->
     <div class='month-view embed-container'>
         <iframe src='https://calendar.google.com/calendar/embed?showTitle=0&height=600&wkst=1&bgcolor=%23993399&src=seattlecentral.edu_j1ekvjcuh37h3n1bug1d82r5v0%40group.calendar.google.com&color=%23B1440E&ctz=America%2FLos_Angeles' style='border:solid 1px #777' width='800' height='600' frameborder='0' scrolling='no'>
