@@ -61,12 +61,23 @@ div.embed-container iframe {
     height: 100%;
 }
 
-.full-screen {
-    min-height: 100vh;
-    background-color: #1abc9c;
+div.embed-webcam {
+    position: relative;
+    padding-bottom: 56.25%;
+    width: 98%;
+    overflow: hidden;
+    max-width: 98%;
+} 
+
+/*
+div.embed-webcam iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding:0;
 }
+*/
+
 .center {
   text-align: center;
 }
