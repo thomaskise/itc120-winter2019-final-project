@@ -12,6 +12,7 @@ body {
    font-family: sans-serif;
    font-size: 1em;
    color: #87CEEB;
+   min-height: 100vh;
 }
 
 h1 {
@@ -28,17 +29,12 @@ a {
 } 
 /****************Header  **********/
 header{
-    background-color: #1C062A;
-/*    background-color: pink;*/
     display:block;
     height: 150px;
     margin: -5px 0px 0px -5px;
 }
 
    .logo {
-      background-color: #1C062A;
-/*    background-color: aqua;*/
-/*      display: hidden;*/
       height: inherit;
       float: left;
       width: 15%;
@@ -69,7 +65,7 @@ header{
    display: flex;
    flex-direction: column-reverse;
    width: 100%;
-   min-height: 100vh;
+/*   min-height: 100vh;*/
 }
 
 .s-layout__content {
@@ -181,11 +177,8 @@ header{
 /*************  Footer CSS *************/
 footer{
 	clear:both;
-    background-color: #1C062A;
-/*    background-color: slateblue;*/
     bottom: 0;
     right: 0;
-/*    float: right;*/
     padding-right: 10px;
     width: 100%;
 }
