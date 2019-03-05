@@ -61,22 +61,36 @@ div.embed-container iframe {
     height: 100%;
 }
 
-div.embed-webcam {
+div.embed-webcam-dot {
     position: relative;
-    padding-bottom: 56.25%;
-    width: 98%;
+    padding-bottom: 5%;
+    width: 335px;
+    height: 300px;
     overflow: hidden;
-    max-width: 98%;
 } 
 
-/*
-div.embed-webcam iframe {
+
+div.embed-webcam-dot iframe {
     position: absolute;
-    top: 0;
-    left: 0;
+    border: none;
     width: 100%;
+    overflow: inherit;
 }
-*/
+
+div.embed-webcam-uw {
+    position: relative;
+    padding-bottom: 5%;
+    width: 704px;
+    height: 480px;
+    overflow: hidden;
+} 
+
+div.embed-webcam-uw iframe {
+    position: absolute;
+    border: none;
+    width: 100%;
+    overflow: inherit;
+}
 
 .center {
   text-align: center;
