@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  font-size: -webkit-xxx-large;
+  font-size: xx-large;
 }
 
 em {
@@ -27,6 +27,12 @@ a {
    text-decoration: none;
    color: inherit;
 } 
+
+img + p {
+    text-align: center;
+    
+}
+
 /****************Header  **********/
 header{
     display:block;
@@ -102,7 +108,8 @@ header{
 
 .s-sidebar__trigger > i {
    display: inline-block;
-   margin: 0.5em 0 0 0.5em;
+   margin: 0.1em 0 0 0.5em;
+   font-size: xx-large;
    color: #87CEEB;
 }
 

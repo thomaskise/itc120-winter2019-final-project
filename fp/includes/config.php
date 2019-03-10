@@ -24,22 +24,44 @@ define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
 //define the current page name as a constant
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
-$classSelected="";
 switch(THIS_PAGE){
     case "index.php":
-
-        $title="Template";
-        $pageHeading="Template";
-        $sectionHeading="Get in touch! We'd love to learn more about you!";
-        $classSelected='"class="selected"';
+        $title="Clay's Cool Home";
+        $pageHeading="Clay's Cool";
+        $sectionHeading="";
         $formAutoFocus="autofocus";
         $logo="fa fa-fw fa-home";
+        $pageImage="tempimage.jpg";
+        $imagelabel="Island Park Student Work";
+        $altText="image of Island Park student work";
         break;
+    
+    case "contact.php":
+        $title="Clay's Cool Contact";
+        $pageHeading="Clay's Cool: Get in touch!";
+        $sectionHeading="Send us a note!";
+        $formAutoFocus="autofocus";
+        $logo="fa fa-fw fa-home";
+        $pageImage="tempimage.jpg";
+        $imagelabel="Island Park Student Work";
+        $altText="image of Island Park student work";
+        break;
+
+    case "template.php":
+        $title="Template";
+        $pageHeading="Template";
+        $sectionHeading="";
+        $formAutoFocus="autofocus";
+        $logo="fa fa-fw fa-home";
+        $pageImage="tempimage.jpg";
+        $imagelabel="Template Placeholder Image";
+        $altText="Template Placeholder Image";
+        break;
+        
     default:
-        $title="Page Not Live";
-        $pageHeading="New Page Coming Soon!";
+        $title="Contact Clay's Cool";
+        $pageHeading="Clay's Cool: Get in touch!";
         $sectionHeading="Cool stuff coming soon!";
-        $classSelected='"class="selected"';
         $formAutoFocus="";
         $logo="fa fa-hammer";
         break;
