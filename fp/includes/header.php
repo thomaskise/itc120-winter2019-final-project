@@ -22,13 +22,13 @@
     </div>
     <div class="heading">
         <h1><?=$pageHeading?></h1>
-        <p>Pellentesque habitant morbi tristique senectus.</p>
+        <p>An after school program by Purple Moon Design LLC in partnership with Island Park PTA</p>
     </div>
     <div class="s-layout">
         <!-- Sidebar -->
         <div class="s-layout__sidebar">
           <a class="s-sidebar__trigger" href="#0">
-             <i style="font-size: -webkit-xxx-large" class="fa fa-bars"></i>
+             <i class="fa fa-bars"></i>
           </a>
           <nav class="s-sidebar__nav">
             <ul><?=makeLinks($nav1)?></ul>

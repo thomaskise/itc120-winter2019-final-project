@@ -3,7 +3,7 @@
 <!-- Content -->
 <main class="s-layout__content">
     <section>
-            <h2 class="pageID"><?=$pageHeading?></h2>
+            <h2 class="pageID"><?=$sectionHeading?></h2>
             <?php
             /*
              * Below are 2 different forms to be re-used       
@@ -18,8 +18,8 @@
     </section>
 <!--aside has no content for home page -->
   <aside>
-    <img src="images/tempimage.jpg" alt="template image" id="pagepic" />
-    <p style="text-align:center;">pic label</p>
+    <img src="images/<?=$pageImage?>" alt="<?=$altText?>" id="pagepic" />
+    <p><?=$imagelabel?></p>
   </aside>
 </main>
 <?php include 'includes/footer.php';?>
