@@ -18,9 +18,9 @@
  */
 
 #EDIT THE FOLLOWING:
-$toAddress = "thomas.harrington@seattlecentral.edu";  //place your/your client's email address here
-$toName = "Kise Harrington"; //place your client's name here
-$website = "Thom's Big Website";  //place NAME of your client's website here
+$toAddress = "stewart@purplemoondesign.com";  //place your/your client's email address here
+$toName = "Stewart Wong"; //place your client's name here
+$website = "Clay's Cool";  //place NAME of your client's website here
 #--------------END CONFIG AREA ------------------------#
 $sendEmail = TRUE; //if true, will send an email, otherwise just show user data.
 $dateFeedback = true; //if true will show date/time with reCAPTCHA error - style a div with class of dateFeedback
@@ -46,7 +46,7 @@ if ($response != null && $response->success)
         <p>We'll respond via email within 48 hours, if you requested information.</p>
         <BR />
         <BR />
-        <p> <a href="https://kiseharrington.com/web120/big/index.php">Get back to the contact form!</a></p>
+        <p> <a href="classes.php">Checkout our class schedule!</a></p>
     </div>    
     <!-- END HTML FEEDBACK -->        
     <?php
@@ -77,9 +77,9 @@ if ($response != null && $response->success)
 			<select name="How_Did_You_Hear_About_Us?" required="required" title="How You Heard is required" tabindex="30">
 				<option value="">How Did You Hear About Us?</option>
 				<option value="Web">Web</option>
-				<option value="A Friend">A Friend</option>
-				<option value="LinkedIn">LinkedIn</option>
-				<option value="Facebook">Facebook</option>
+				<option value="school">Mercer Island Elementary</option>
+				<option value="PTSA">PTSA</option>
+				<option value="student">Heard it on the playground</option>
 				<option value="Other">Other</option>
 			</select>
 		</label>
@@ -87,27 +87,25 @@ if ($response != null && $response->success)
 	
 	<div>	
 		<fieldset>
-			<legend>What Services Are You Interested In?</legend>
-			<input type="checkbox" name="Interested_In[]" value="New Website" tabindex="40" /> New Website <br />
-			<input type="checkbox" name="Interested_In[]" value="Website Redesign" /> Website Redesign <br />
-			<input type="checkbox" name="Interested_In[]" value="Special Application" /> Special Application <br />
-			<input type="checkbox" name="Interested_In[]" value="Collaboration" /> Collaboration <br />
+			<legend>Purpose of today's contact:  </legend>
+			<input type="checkbox" name="Interested_In[]" value="Current Class" /> Current Class <br />
+			<input type="checkbox" name="Interested_In[]" value="Upcoming Classes" tabindex="40" /> Upcoming Classes <br />
 			<input type="checkbox" name="Interested_In[]" value="Other" /> Other <br />
 		</fieldset>
 	</div>
 	
 		<div>	
 		<fieldset>
-			<legend>Would you like to meet in person?</legend>
-			<input type="radio" name="Do you want to meet?" value="Yes" 
+			<legend>Would you like a response?</legend>
+			<input type="radio" name="Response?" value="Yes" 
 			required="required" title="Mailing list is required" tabindex="50"  
-			/> Yes! (Suggest some times in comments.) <br />
-			<input type="radio" name="Do you want to meet?" value="No" /> Not at this time. <br />
+			/> Yes! Please get in back to me. <br />
+			<input type="radio" name="Response?" value="No" /> No, just passing along my thoughts. <br />
 		</fieldset>
 	</div>
 	<div>	
 		<label>
-			Comments:<br /><textarea name="Comments" cols="36" rows="4" placeholder="Your comments are important to us!" tabindex="60"></textarea>
+			<br /><br />Comments:<br /><textarea name="Comments" cols="36" rows="4" placeholder="Your comments are important to us!" tabindex="60"></textarea>
 		</label>
 	</div>	
 	<div><?=$feedback?></div>
@@ -121,4 +119,3 @@ if ($response != null && $response->success)
 <?php
 }
 ?>
-

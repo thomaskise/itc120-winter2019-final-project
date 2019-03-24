@@ -10,7 +10,7 @@ stores configuration information for our web application
 //removes header already sent errors
 ob_start();
 
-include 'credentials.php';
+include 'credentials.php';//my credentials are here for security
     
 define('SECURE',true); #force secure, https, for all site pages
 
@@ -24,17 +24,69 @@ define('PAGE_PARENT',basename(dirname($_SERVER['PHP_SELF'])));
 //define the current page name as a constant
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
+//set sub_folder when site is not in root folder - be sure to add trailing slash!
+
+    $sub_folder = 'web120/';
+
+//force secure website
+    if (SECURE && $_SERVER['SERVER_PORT'] != 443) {#force HTTPS
+        header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+        $protocol = 'https://';
+    }else{//adjust protocol
+        $protocol = (SECURE==true ? 'https://' : 'http://'); // returns true
+    }
+//$protocol = https://
+//$_SERVER["HTTP_HOST"] = kiseharrington.com
+//$_SERVER["DOCUMENT_ROOT"] = /home/thohar69/kiseharrington.com
+
+//set virtual path to web root in site subfolder
+    $virtual_path = $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder;
+
+//will add sub-folder if not loaded to root:
+    $physical_path = 'www' . $_SERVER["DOCUMENT_ROOT"] . '/' . $sub_folder;
+
+//define subfolder paths
+    define('CLASS_PAGE_PATH', $virtual_path . 'class-pages/');
+    define('CSS_PATH', $virtual_path . 'css/');
+    define('IMAGE_PATH', $virtual_path . 'images/');
+    define('INCLUDE_PATH', $virtual_path  . 'includes/');
+    define('JS_PATH', $virtual_path  . 'js/');
+
 switch(THIS_PAGE){
     case "index.php":
         $title="Clay's Cool Home";
         $pageHeading="Clay's Cool";
-        $sectionHeading="";
+        $sectionHeading="YAY! Clay's Cool!";
+        $formAutoFocus="autofocus";
+        $logo="fa fa-fw fa-home";
+        $pageImage="home.png";
+        $imagelabel="Island Park Student Work";
+        $altText="image of Island Park student work";
+        break;
+                
+    case "classes.php":
+        $title="Cool Classes";
+        $pageHeading="Cool Classes";
+        $sectionHeading="Current & Past Classes";
+        $formAutoFocus="autofocus";
+        $logo="fa fa-fw fa-home";
+        $pageImage="classes.png";
+        $imagelabel="Island Park Student Work";
+        $altText="image of Island Park student work";
+        break;
+
+        
+    case "about.php":
+        $title="About Clay's Cool";
+        $pageHeading="About Clay's Cool";
+        $sectionHeading="Clay's Cool - Art & Perspective";
         $formAutoFocus="autofocus";
         $logo="fa fa-fw fa-home";
         $pageImage="tempimage.jpg";
         $imagelabel="Island Park Student Work";
         $altText="image of Island Park student work";
         break;
+
     
     case "contact.php":
         $title="Clay's Cool Contact";
@@ -46,7 +98,19 @@ switch(THIS_PAGE){
         $imagelabel="Island Park Student Work";
         $altText="image of Island Park student work";
         break;
-
+    
+    case "template2.php":
+        $title="Template";
+        $pageHeading="Template";
+        $sectionHeading="";
+        $formAutoFocus="autofocus";
+        $logo="fa fa-fw fa-home";
+        $pageImage="tempimage.jpg";
+        $imagelabel="Template Placeholder Image";
+        $altText="Template Placeholder Image";
+        break;
+        
+        
     case "template.php":
         $title="Template";
         $pageHeading="Template";
@@ -71,28 +135,7 @@ switch(THIS_PAGE){
 //prevents date errors
     date_default_timezone_set('America/Los_Angeles');
 
-//force secure website
-    if (SECURE && $_SERVER['SERVER_PORT'] != 443) {#force HTTPS
-        header("Location: https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-    }else{//adjust protocol
-        $protocol = (SECURE==true ? 'https://' : 'http://'); // returns true
-    }
 
-//set sub_folder when site is not in root folder - be sure to add trailing slash!
-
-    $sub_folder = 'web120/';
-
-
-//set virtual path to web root in site subfolder
-    $virtual_path = $protocol . $_SERVER["HTTP_HOST"] . '/' . $sub_folder;
-
-//will add sub-folder if not loaded to root:
-    $physical_path = 'www' . $_SERVER["DOCUMENT_ROOT"] . '/' . $sub_folder;
-
-//define subfolder paths
-    define('INCLUDE_PATH', $physical_path . 'includes/');
-    define('CSS_PATH', $virtual_path . 'css/');
-    define('IMAGE_PATH', $virtual_path . 'images/');
 /*
  * creates navigation links wrapped in <ul> & <li> tags
  *
@@ -116,9 +159,9 @@ function makeLinks($linkArray)
 
         if($url == THIS_PAGE)
         {//selected page - add class reference
-	    	$myReturn .= '<li> <a style="color:red" class="s-sidebar__nav-link" href="' . $url . '">' . $text . '</em></a></li>'  . PHP_EOL;
+	    	$myReturn .= '<li> <a class="sidebar-nav-link sidebar-nav-link-selected" href="' . $url . '">' . $text . '</em></a></li>'  . PHP_EOL;
     	}else{
-	    	$myReturn .= '<li> <a class="s-sidebar__nav-link" href="' . $url . '">' . $text . '</em></a></li>'  . PHP_EOL;
+	    	$myReturn .= '<li> <a class="sidebar-nav-link" href="' . $url . '">' . $text . '</em></a></li>'  . PHP_EOL;
     	} 
         
     }
