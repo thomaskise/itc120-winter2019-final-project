@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';
+<?php include 'includes/header-contact.php';
 /**
  *************************************************************************
  *
@@ -20,12 +20,10 @@
     <div class="content">
         <section>
             <h2 class="pageID"><?=$sectionHeading?></h2>
-            <?php include 'includes/multiple.php'; #demonstrates a simple contact form?>
+            <?php include 'includes/multiple.php';?>
             <p class="clear-recaptcha"></p>
         </section>
-            <div> <!--div tag attemps to trigger css to hide the asside on mobile-->
-                <?php include 'includes/aside.php';?>
-            </div>
+        <?php include 'includes/aside.php';?>
     </div>
 </main>
 <?php include 'includes/footer.php';?>
