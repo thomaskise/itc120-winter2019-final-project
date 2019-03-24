@@ -68,7 +68,8 @@ $feedback = ""; #allow feedback to help see reCAPTCHA not correct
 $resp = ""; # the response from reCAPTCHA
 $error = ""; # the error code from reCAPTCHA, if any
 $skipFields = "g-recaptcha-response,Email"; #comma separated list of form elements NOT to store.
-$fromDomain = $_SERVER["SERVER_NAME"];
+$fromDomain = "purplemoondesign.com";
+//$fromDomain = $_SERVER["SERVER_NAME"];
 $fromAddress = "noreply@" . $fromDomain; //form always submits from domain where form resides
 include 'recaptchalib.php'; #required reCAPTCHA class code 
 if(!defined('THIS_PAGE')){define("THIS_PAGE",basename($_SERVER['PHP_SELF']));} 
